@@ -67,7 +67,37 @@ public class Commit {
         System.out.println("repository latest revision before committing" + latestRevision);
 
         ISVNEditor editor = repository.getCommitEditor("directory and file added", null);
-        editor.addDir("test", null,0);
+        //editor.addDir("test", null,-1); //本行不确定
+        SVNCommitInfo commitInfo = addDir(editor, "test", "test/file.txt", contents);
+        System.out.println("The directory was added: " + commitInfo);
         //System.out.println("The directory was added: " + commitInfo);
     }
+
+    private static SVNCommitInfo addDir(ISVNEditor editor, String dirPath,
+                                        String filePath, byte[] data) throws SVNException {
+        editor.openRoot(-1);
+
+        editor.addDir(dirPath,null,-1);
+        editor.addFile(filePath,null,-1);
+        editor.applyTextDelta(filePath,null);
+
+        //说明是delta还不知道
+        SVNDeltaGenerator deltaGenerator = new SVNDeltaGenerator();
+        String checksum = deltaGenerator.sendDelta(filePath,new ByteArrayInputStream(data),editor,
+                true);
+
+        editor.closeFile(filePath,checksum);
+
+        editor.closeDir();
+
+        return editor.closeEdit();
+
+    }
+
+    private static void setupLibrary() {
+        DAVRepositoryFactory.setup();
+        SVNRepositoryFactoryImpl.setup();
+        FSRepositoryFactory.setup();
+    }
+
 }
