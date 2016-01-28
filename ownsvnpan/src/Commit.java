@@ -54,7 +54,7 @@ public class Commit {
         ISVNAuthenticationManager authManager = SVNWCUtil.createDefaultAuthenticationManager(userName,userPassword);
         repository.setAuthenticationManager(authManager);
 
-        SVNNodeKind nodeKind = repository.checkPath("",-1);
+        SVNNodeKind nodeKind = repository.checkPath("/test1",-1);
         if (nodeKind == SVNNodeKind.NONE) {
             SVNErrorMessage err = SVNErrorMessage.create(SVNErrorCode.UNKNOWN, "No entry at URL '{0}'",url);
             throw new SVNException(err);
@@ -64,11 +64,11 @@ public class Commit {
         }
 
         long latestRevision = repository.getLatestRevision();
-        System.out.println("repository latest revision before committing" + latestRevision);
+        System.out.println("repository latest revision before committing " + latestRevision);
 
         ISVNEditor editor = repository.getCommitEditor("directory and file added", null);
-        //editor.addDir("test", null,-1); //本行不确定
-        SVNCommitInfo commitInfo = addDir(editor, "test", "test/file.txt", contents);
+
+        SVNCommitInfo commitInfo = addDir(editor, "test1", "/test1/file.txt", contents);
         System.out.println("The directory was added: " + commitInfo);
         //System.out.println("The directory was added: " + commitInfo);
     }
@@ -77,7 +77,7 @@ public class Commit {
                                         String filePath, byte[] data) throws SVNException {
         editor.openRoot(-1);
 
-        editor.addDir(dirPath,null,-1);
+        //editor.addDir(dirPath,null,-1);
         editor.addFile(filePath,null,-1);
         editor.applyTextDelta(filePath,null);
 
@@ -88,11 +88,13 @@ public class Commit {
 
         editor.closeFile(filePath,checksum);
 
-        editor.closeDir();
+        //editor.closeDir();
 
         return editor.closeEdit();
 
     }
+
+   // private static
 
     private static void setupLibrary() {
         DAVRepositoryFactory.setup();
