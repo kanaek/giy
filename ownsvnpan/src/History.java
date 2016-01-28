@@ -9,11 +9,18 @@
  * newer version instead, at your option.
  * ====================================================================
  */
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.*;
 
 import org.tmatesoft.svn.core.SVNException;
 import org.tmatesoft.svn.core.SVNLogEntry;
-import org.tmatesoft.svn.core.SVNLogEntryPath;
+import org.tmatesoft.svn.core.SVNNodeKind;
+import org.tmatesoft.svn.core.SVNProperties;
+import org.tmatesoft.svn.core.SVNProperty;
 import org.tmatesoft.svn.core.SVNURL;
 import org.tmatesoft.svn.core.auth.ISVNAuthenticationManager;
 import org.tmatesoft.svn.core.internal.io.dav.DAVRepositoryFactory;
@@ -22,7 +29,6 @@ import org.tmatesoft.svn.core.internal.io.svn.SVNRepositoryFactoryImpl;
 import org.tmatesoft.svn.core.io.SVNRepository;
 import org.tmatesoft.svn.core.io.SVNRepositoryFactory;
 import org.tmatesoft.svn.core.wc.SVNWCUtil;
-
 /*
  * The following example program demonstrates how you can use SVNRepository to
  * obtain a history for a range of revisions including (for each revision): all
@@ -149,50 +155,34 @@ public class History {
             System.err.println("error while fetching the latest repository revision: " + svne.getMessage());
             System.exit(1);
         }
-
-        //Collection logEntries = null;
         List<SVNLogEntry> logEntries = new ArrayList<SVNLogEntry>();
+        //Collection logEntries = null;
+        long latestRevision = -1;
         try {
-            /*
-             * Collects SVNLogEntry objects for all revisions in the range
-             * defined by its start and end points [startRevision, endRevision].
-             * For each revision commit information is represented by
-             * SVNLogEntry.
-             * 
-             * the 1st parameter (targetPaths - an array of path strings) is set
-             * when restricting the [startRevision, endRevision] range to only
-             * those revisions when the paths in targetPaths were changed.
-             * 
-             * the 2nd parameter if non-null - is a user's Collection that will
-             * be filled up with found SVNLogEntry objects; it's just another
-             * way to reach the scope.
-             * 
-             * startRevision, endRevision - to define a range of revisions you are
-             * interested in; by default in this program - startRevision=0, endRevision=
-             * the latest (HEAD) revision of the repository.
-             * 
-             * the 5th parameter - a boolean flag changedPath - if true then for
-             * each revision a corresponding SVNLogEntry will contain a map of
-             * all paths which were changed in that revision.
-             * 
-             * the 6th parameter - a boolean flag strictNode - if false and a
-             * changed path is a copy (branch) of an existing one in the repository
-             * then the history for its origin will be traversed; it means the 
-             * history of changes of the target URL (and all that there's in that 
-             * URL) will include the history of the origin path(s).
-             * Otherwise if strictNode is true then the origin path history won't be
-             * included.
-             * 
-             * The return value is a Collection filled up with SVNLogEntry Objects.
-             */
-            repository.log(new String[] {""}, logEntries,
-                    -1, -1, true, true);
+            latestRevision = repository.getLatestRevision();
+
+            //List<SVNLogEntry> logEntries = new ArrayList<SVNLogEntry>();
+            try
+            {
+                repository.log(new String[]{""},//为过滤的文件路径前缀，为空表示不进行过滤
+                        logEntries,
+                        -1,//-1代表最新的版本号，初始版本号为0
+                        -1,
+                        true,
+                        true);
+            }
+            catch (SVNException e)
+            {
+                e.printStackTrace();
+
+            }
+            System.out.println("当前log信息数量:"+logEntries.size());
+            String message=logEntries.get(0).getMessage().toString();
+            System.out.println("提交的message信息："+message);
+
 
         } catch (SVNException svne) {
-            System.out.println("error while collecting log information for '"
-                    + url + "': " + svne.getMessage());
-            System.out.println("hello");
-            svne.printStackTrace();
+            System.err.println("获取最新版本号时出错: " + svne.getMessage());
             System.exit(1);
         }
 
@@ -235,8 +225,8 @@ public class History {
                     /*
                      * obtains a next SVNLogEntryPath
                      */
-                    SVNLogEntryPath entryPath = (SVNLogEntryPath) logEntry
-                            .getChangedPaths().get(changedPaths.next());
+                 //   SVNLogEntryPath entryPath = (SVNLogEntryPath) logEntry
+                  //          .getChangedPaths().get(changedPaths.next());
                     /*
                      * SVNLogEntryPath.getPath returns the changed path itself;
                      * 
@@ -249,16 +239,17 @@ public class History {
                      * SVNLogEntryPath.getCopyRevision tells where it was copied
                      * from and what revision the origin path was at.
                      */
-                    System.out.println(" "
-                            + entryPath.getType()
-                            + "	"
-                            + entryPath.getPath()
-                            + ((entryPath.getCopyPath() != null) ? " (from "
-                            + entryPath.getCopyPath() + " revision "
-                            + entryPath.getCopyRevision() + ")" : ""));
+              //      System.out.println(" "
+              //              + entryPath.getType()
+              //              + "	"
+              //              + entryPath.getPath()
+               //             + ((entryPath.getCopyPath() != null) ? " (from "
+                //            + entryPath.getCopyPath() + " revision "
+                //            + entryPath.getCopyRevision() + ")" : ""));
                 }
             }
         }
+
     }
 
     /*
