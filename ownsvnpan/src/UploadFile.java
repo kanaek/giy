@@ -1,6 +1,8 @@
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 import org.tmatesoft.svn.core.SVNCommitInfo;
 import org.tmatesoft.svn.core.SVNErrorCode;
@@ -28,22 +30,21 @@ import org.tmatesoft.svn.core.wc.SVNWCUtil;
 public class UploadFile {
     public static void main(String[] args) {
 
-
+        SimpleDateFormat df = new SimpleDateFormat("yyMMdd HH:mm:ss");
+        String temp = df.format(new Date());
+        System.out.println(temp);
+        /*
         setupLibrary();
 
         try {
             commitExample();
-        }  catch (SVNException e) {
-            SVNErrorMessage err = e.getErrorMessage();
-
-            while (err != null) {
-                System.err.println(err.getMessage());
-                err = err.getChildErrorMessage();
-            }
-            System.exit(1);
-        } catch (IOException e) {
+        }   catch (SVNException e){
+               e.printStackTrace();
+        }   catch (IOException e) {
             e.printStackTrace();
         }
+        */
+
         /*
         try {
             readLocalFile();
@@ -55,8 +56,8 @@ public class UploadFile {
     }
 
     private static void readLocalFile() throws IOException{
-        FileInputStream fis = new FileInputStream("C:\\git\\giy\\xn_sirm_pm_需求分析文档v1.2.doc");      //file not found exception
-
+        FileInputStream fis = new FileInputStream("C:\\git\\giy\\svn.docx");      //file not found exception
+        String FileName = "svn.docx";  //file name
         byte[] buff = new byte[fis.available()];
         int hasRead = 0;
 
@@ -68,11 +69,12 @@ public class UploadFile {
     }
 
     private static void commitExample() throws SVNException,IOException {
-        SVNURL url = SVNURL.parseURIEncoded("https://user-PC/svn/qq");
+        SVNURL url = SVNURL.parseURIEncoded("https://user-PC/svn/qq/test1");
         String userName = "kr";
         String userPassword = "123";
 
-        FileInputStream fis = new FileInputStream("C:\\git\\giy\\xn_sirm_pm_需求分析文档v1.2.doc");
+        FileInputStream fis = new FileInputStream("C:\\git\\giy\\svn.docx");
+        String UpFileName = "svn.docx";  //file name
 
         byte[] contents = new byte[fis.available()];
 
@@ -87,7 +89,7 @@ public class UploadFile {
         ISVNAuthenticationManager authManager = SVNWCUtil.createDefaultAuthenticationManager(userName,userPassword);
         repository.setAuthenticationManager(authManager);
 
-        SVNNodeKind nodeKind = repository.checkPath("",-1);
+        SVNNodeKind nodeKind = repository.checkPath("/test1",-1);
         if (nodeKind == SVNNodeKind.NONE) {
             SVNErrorMessage err = SVNErrorMessage.create(SVNErrorCode.UNKNOWN, "No entry at URL '{0}'",url);
             throw new SVNException(err);
@@ -100,18 +102,59 @@ public class UploadFile {
         System.out.println("repository latest revision before committing " + latestRevision);
 
         ISVNEditor editor = repository.getCommitEditor("directory and file added", null);
+        try {
+            SVNCommitInfo commitInfo = addDir(editor, "test1", UpFileName, contents);
+        }  catch (SVNException e) {
+            SVNErrorMessage err = e.getErrorMessage();
+            if(err.getMessage().contains("already exists")) {
+                //选择覆盖
+                SVNCommitInfo deleInfo = deleteDir(editor,UpFileName);
+                System.out.println("already delete");
 
-        SVNCommitInfo commitInfo = addDir(editor, "test1", "file.doc", contents);
-        System.out.println("The directory was added: " + commitInfo);
+                ISVNEditor editor2 = repository.getCommitEditor("directory and file added", null);
+
+                try {
+                    addDir(editor2, "test1", UpFileName,contents);
+                    System.out.println("new svn.docx");
+                }  catch (SVNException e1) {
+                    e1.printStackTrace();
+                }
+
+
+                //选择新增
+
+
+
+            } else {
+                //暂时没有
+            }
+        }
+
+
+        //SVNCommitInfo commitInfo = addDir(editor, "test1", UpFileName, contents);
         //System.out.println("The directory was added: " + commitInfo);
+        //System.out.println("The directory was added: " + commitInfo);
+    }
+    /*
+      deletion of a directory
+     */
+    private static SVNCommitInfo deleteDir(ISVNEditor editor, String dirPath) throws SVNException {
+        editor.openRoot(-1);
+        editor.deleteEntry(dirPath,-1);
+        editor.closeDir();
+        return editor.closeEdit();
     }
 
     private static SVNCommitInfo addDir(ISVNEditor editor, String dirPath,
-                                        String filePath, byte[] data) throws SVNException {
+                                        String filePath, byte[] data) throws SVNException{
+
         editor.openRoot(-1);
 
-        editor.addDir(dirPath,null,-1);
-        editor.addFile(filePath,null,-1);
+        //editor.addDir(dirPath,null,-1);
+
+            editor.addFile(filePath,null,-1);
+
+        //editor.addFile(filePath,null,-1);
         editor.applyTextDelta(filePath,null);
 
         //说明是delta还不知道
@@ -121,9 +164,9 @@ public class UploadFile {
 
         editor.closeFile(filePath,checksum);
 
-        editor.closeDir();
-
+        //editor.closeDir();
         return editor.closeEdit();
+
 
     }
 
