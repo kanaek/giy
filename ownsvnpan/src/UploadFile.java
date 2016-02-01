@@ -1,4 +1,6 @@
 import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 import org.tmatesoft.svn.core.SVNCommitInfo;
 import org.tmatesoft.svn.core.SVNErrorCode;
@@ -23,8 +25,10 @@ import org.tmatesoft.svn.core.wc.SVNWCUtil;
  * Time: 下午5:16
  * To change this template use File | Settings | File Templates.
  */
-public class Commit {
+public class UploadFile {
     public static void main(String[] args) {
+
+
         setupLibrary();
 
         try {
@@ -37,24 +41,53 @@ public class Commit {
                 err = err.getChildErrorMessage();
             }
             System.exit(1);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        /*
+        try {
+            readLocalFile();
+        } catch (IOException e){
+            e.printStackTrace();
+        }  */
+
         System.exit(0);
     }
 
-    private static void commitExample() throws SVNException {
+    private static void readLocalFile() throws IOException{
+        FileInputStream fis = new FileInputStream("C:\\git\\giy\\xn_sirm_pm_需求分析文档v1.2.doc");
+
+        byte[] buff = new byte[fis.available()];
+        int hasRead = 0;
+
+
+        while ((hasRead = fis.read(buff)) > 0) {
+            System.out.println(hasRead);
+        }
+        fis.close();
+    }
+
+    private static void commitExample() throws SVNException,IOException {
         SVNURL url = SVNURL.parseURIEncoded("https://user-PC/svn/qq");
         String userName = "kr";
         String userPassword = "123";
 
-        byte [] contents = "this is a new file".getBytes();
-        byte [] modifiedContents = "this is the same file but modified a little".getBytes();
+        FileInputStream fis = new FileInputStream("C:\\git\\giy\\xn_sirm_pm_需求分析文档v1.2.doc");
+
+        byte[] contents = new byte[fis.available()];
+
+        fis.read(contents);
+        fis.close();
+
+        //byte [] contents = "this is a new file".getBytes();
+        //byte [] modifiedContents = "this is the same file but modified a little".getBytes();
 
         SVNRepository repository = SVNRepositoryFactory.create(url);
 
         ISVNAuthenticationManager authManager = SVNWCUtil.createDefaultAuthenticationManager(userName,userPassword);
         repository.setAuthenticationManager(authManager);
 
-        SVNNodeKind nodeKind = repository.checkPath("/test1",-1);
+        SVNNodeKind nodeKind = repository.checkPath("",-1);
         if (nodeKind == SVNNodeKind.NONE) {
             SVNErrorMessage err = SVNErrorMessage.create(SVNErrorCode.UNKNOWN, "No entry at URL '{0}'",url);
             throw new SVNException(err);
@@ -68,7 +101,7 @@ public class Commit {
 
         ISVNEditor editor = repository.getCommitEditor("directory and file added", null);
 
-        SVNCommitInfo commitInfo = addDir(editor, "test1", "/test1/file.txt", contents);
+        SVNCommitInfo commitInfo = addDir(editor, "test1", "file.doc", contents);
         System.out.println("The directory was added: " + commitInfo);
         //System.out.println("The directory was added: " + commitInfo);
     }
@@ -77,7 +110,7 @@ public class Commit {
                                         String filePath, byte[] data) throws SVNException {
         editor.openRoot(-1);
 
-        //editor.addDir(dirPath,null,-1);
+        editor.addDir(dirPath,null,-1);
         editor.addFile(filePath,null,-1);
         editor.applyTextDelta(filePath,null);
 
@@ -88,7 +121,7 @@ public class Commit {
 
         editor.closeFile(filePath,checksum);
 
-        //editor.closeDir();
+        editor.closeDir();
 
         return editor.closeEdit();
 
