@@ -55,7 +55,7 @@ public class UploadFile {
     }
 
     private static void readLocalFile() throws IOException{
-        FileInputStream fis = new FileInputStream("C:\\git\\giy\\xn_sirm_pm_需求分析文档v1.2.doc");
+        FileInputStream fis = new FileInputStream("C:\\git\\giy\\xn_sirm_pm_需求分析文档v1.2.doc");      //file not found exception
 
         byte[] buff = new byte[fis.available()];
         int hasRead = 0;
