@@ -2,6 +2,10 @@
   <library name="svnkit-1.8.9">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/svnkit-1.8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jna-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/svnkit-cli-1.8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/svnkit-javahl16-1.8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/trilead-ssh2-1.0.0-build217.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
