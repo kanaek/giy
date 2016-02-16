@@ -14,7 +14,7 @@ import java.util.Map.Entry;
  *操作ini文件:http://blog.csdn.net/Mr__fang/article/details/42030071
  */
 public class NewParser {
-    protected Map<String, Map<String,String>> sections;
+    protected Map<String, Map<String,String>> sections = new LinkedHashMap<String, Map<String, String>>();
     private transient String currentSection;
     private transient Map<String,String> current;
     private String[] notes = new String[] {";", "#", "//"};
@@ -46,12 +46,13 @@ public class NewParser {
     protected void parseLine(String line) {
         line = line.trim();
         if (line.matches("\\[.*\\]"))  {
-            System.out.println(line);
+            //System.out.println(line);
             currentSection = line.replaceFirst("\\[(.*)\\]", "$1");
-            System.out.println(currentSection);
+            //System.out.println(currentSection);
             current = new LinkedHashMap<String, String>();
-            System.out.println(current);
-            //sections.put(currentSection, current);
+            //current.put(null,null);
+            //System.out.println(current);
+            sections.put(currentSection, current);
         }  else if (line.matches(".*=.*") && !line.startsWith("#")) {
             if (current != null) {
                 for (String str : notes) {
@@ -104,6 +105,7 @@ public class NewParser {
                Map<String, String> q = p.getValues(k);
                for(Map.Entry<String, String> entry : q.entrySet()){
                    System.out.println(entry.getKey() + "==" + entry.getValue());
+                   break;
                }
            }
 
