@@ -27,13 +27,14 @@ import org.tmatesoft.svn.core.wc.SVNWCUtil;
  * Time: 下午5:16
  * To change this template use File | Settings | File Templates.
  */
+/*
+本程序用于测试文件上传至SVN的功能。当文件名重名时，可选择覆盖或者新增。选择新增时，文件名+上传的时间，再上传
+ */
 public class UploadFile {
     public static void main(String[] args) {
 
-        SimpleDateFormat df = new SimpleDateFormat("yyMMdd HH:mm:ss");
-        String temp = df.format(new Date());
-        System.out.println(temp);
-        /*
+
+
         setupLibrary();
 
         try {
@@ -43,7 +44,7 @@ public class UploadFile {
         }   catch (IOException e) {
             e.printStackTrace();
         }
-        */
+
 
         /*
         try {
@@ -110,7 +111,7 @@ public class UploadFile {
                 //选择覆盖
                 SVNCommitInfo deleInfo = deleteDir(editor,UpFileName);
                 System.out.println("already delete");
-
+                /*
                 ISVNEditor editor2 = repository.getCommitEditor("directory and file added", null);
 
                 try {
@@ -118,10 +119,21 @@ public class UploadFile {
                     System.out.println("new svn.docx");
                 }  catch (SVNException e1) {
                     e1.printStackTrace();
-                }
+                }   */
 
 
                 //选择新增
+                ISVNEditor editor3 = repository.getCommitEditor("file name revised",null);
+                SimpleDateFormat df = new SimpleDateFormat("yyMMddHH:mm:ss");
+                String temp = df.format(new Date());
+                StringBuilder test = new StringBuilder("svn.docx");
+                test.insert(test.indexOf("."), temp);
+                try {
+                    addDir(editor3,"test1", test.toString(), contents);
+                    System.out.println("upload" + test.toString() +"successfully");
+                }  catch (SVNException e2) {
+                    e2.printStackTrace();
+                }
 
 
 
@@ -152,7 +164,7 @@ public class UploadFile {
 
         //editor.addDir(dirPath,null,-1);
 
-            editor.addFile(filePath,null,-1);
+        editor.addFile(filePath,null,-1);
 
         //editor.addFile(filePath,null,-1);
         editor.applyTextDelta(filePath,null);

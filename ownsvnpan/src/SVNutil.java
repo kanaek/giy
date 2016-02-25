@@ -5,7 +5,9 @@
  * Time: 下午12:31
  * To change this template use File | Settings | File Templates.
  */
-
+/*
+ 用于测试SVNKIT库的打印全目录的文件名，版本号，作者，修改时间等信息
+ */
 import java.util.Collection;
 import java.util.Iterator;
 

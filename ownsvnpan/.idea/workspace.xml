@@ -13,15 +13,25 @@
     <file path="/svntable.html" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1452570761578" ignored="false" />
     <file path="/examples1.html" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1452585481145" ignored="false" />
     <file path="/test1.html" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1452736297096" ignored="false" />
-    <file path="/fragment.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1452832224342" ignored="false" />
-    <file path="/SVNutil.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1453772939530" ignored="false" />
+    <file path="/fragment.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1455412653672" ignored="false" />
+    <file path="/SVNutil.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1455498224188" ignored="false" />
     <file path="/Obj2Json.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1452848964940" ignored="false" />
     <file path="/SVNlist.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1452851978752" ignored="false" />
     <file path="/index.jsp" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1453102536650" ignored="false" />
     <file path="/Commit.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1454320191529" ignored="false" />
     <file path="/History.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1453969563205" ignored="false" />
-    <file path="/UploadFile.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1454320192581" ignored="false" />
-    <file path="/AddTopDir.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1454321101634" ignored="false" />
+    <file path="/UploadFile.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1455501005908" ignored="false" />
+    <file path="/AddTopDir.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1454477684900" ignored="false" />
+    <file path="/CreateRepo.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1455501966827" ignored="false" />
+    <file path="/testlucene.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1455444258773" ignored="false" />
+    <file path="/IndexManager.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1455502000450" ignored="false" />
+    <file path="/IniParser.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1455530465959" ignored="false" />
+    <file path="/GroupValue.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1455528345198" ignored="false" />
+    <file path="/newparser.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1455602692211" ignored="false" />
+    <file path="/NewParser.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1455760037786" ignored="false" />
+    <file path="/PasswdParser.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1456133288640" ignored="false" />
+    <file path="/AuthzParser.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1455765408932" ignored="false" />
+    <file path="/testCommand.java" changelist="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" time="1456135799566" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +51,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -76,7 +86,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -86,55 +96,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <file leaf-file-name="IndexManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IndexManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="9" selection-start="1379" selection-end="1379" vertical-scroll-proportion="-0.6785714">
+            <state line="194" column="24" selection-start="6492" selection-end="6734" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="examples1.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/mmGrid-master/examples/examples1.html">
+      <file leaf-file-name="IniParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IniParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="55" selection-start="13247" selection-end="13247" vertical-scroll-proportion="0.0">
+            <state line="25" column="17" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SVNutil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SVNutil.java">
+      <file leaf-file-name="GroupValue.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GroupValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="23" selection-start="4381" selection-end="4381" vertical-scroll-proportion="0.0">
+            <state line="16" column="57" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="History.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/History.java">
+      <file leaf-file-name="PasswdParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswdParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="0" selection-start="6586" selection-end="6586" vertical-scroll-proportion="0.0">
+            <state line="82" column="21" selection-start="2192" selection-end="2192" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadFile.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UploadFile.java">
+      <file leaf-file-name="testCommand.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/testCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="77" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+            <state line="20" column="9" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthzParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AuthzParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="58" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddTopDir.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AddTopDir.java">
+      <file leaf-file-name="CreateRepo.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CreateRepo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.6641414">
+            <state line="11" column="75" selection-start="305" selection-end="305" vertical-scroll-proportion="-0.5302013">
               <folding />
             </state>
           </provider>
@@ -150,21 +171,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/login.jsp" />
-        <option value="$PROJECT_DIR$/web/login.html" />
-        <option value="$PROJECT_DIR$/web/svnrep.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/svntable.html" />
-        <option value="$PROJECT_DIR$/web/testuse/test1.html" />
-        <option value="$PROJECT_DIR$/src/Obj2Json.java" />
-        <option value="$PROJECT_DIR$/src/SVNlist.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/mmGrid-master/examples/examples1.html" />
-        <option value="$PROJECT_DIR$/src/SVNutil.java" />
-        <option value="$PROJECT_DIR$/src/DisplayFile.java" />
-        <option value="$PROJECT_DIR$/src/History.java" />
         <option value="$PROJECT_DIR$/src/Commit.java" />
-        <option value="$PROJECT_DIR$/src/UploadFile.java" />
         <option value="$PROJECT_DIR$/src/AddTopDir.java" />
+        <option value="$PROJECT_DIR$/src/testlucene.java" />
+        <option value="$PROJECT_DIR$/src/SVNutil.java" />
+        <option value="$PROJECT_DIR$/src/UploadFile.java" />
+        <option value="$PROJECT_DIR$/src/IndexManager.java" />
+        <option value="$PROJECT_DIR$/src/GroupValue.java" />
+        <option value="$PROJECT_DIR$/src/IniParser.java" />
+        <option value="$PROJECT_DIR$/C语言实现读取配置文件.c" />
+        <option value="$PROJECT_DIR$/src/newparser.java" />
+        <option value="$PROJECT_DIR$/src/NewWriter.java" />
+        <option value="$PROJECT_DIR$/src/NewParser.java" />
+        <option value="$PROJECT_DIR$/src/AuthzParser.java" />
+        <option value="$PROJECT_DIR$/src/PasswdParser.java" />
+        <option value="$PROJECT_DIR$/src/CreateRepo.java" />
+        <option value="$PROJECT_DIR$/src/testCommand.java" />
       </list>
     </option>
   </component>
@@ -176,6 +198,41 @@
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="754" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>GSPGrailsGroovy</id>
+          </State>
+          <State>
+            <id>GrailsGroovy</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>J2ME Plugin</id>
+          </State>
+          <State>
+            <id>Numeric issues</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -234,7 +291,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -251,6 +308,10 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -258,14 +319,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="vcs.Subversion" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/trilead-ssh2-1.0.0-build217.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/lucene-queryparser-5.4.1.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -276,10 +337,10 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.UploadFile">
-    <configuration default="false" name="SVNutil" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Application.CreateRepo">
+    <configuration default="false" name="IndexManager" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="SVNutil" />
+      <option name="MAIN_CLASS_NAME" value="IndexManager" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -294,9 +355,9 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Commit" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="IniParser" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Commit" />
+      <option name="MAIN_CLASS_NAME" value="IniParser" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -311,9 +372,9 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="History" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="NewParser" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="History" />
+      <option name="MAIN_CLASS_NAME" value="NewParser" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -328,9 +389,9 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="DisplayFile" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="PasswdParser" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="DisplayFile" />
+      <option name="MAIN_CLASS_NAME" value="PasswdParser" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -345,9 +406,9 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="UploadFile" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="CreateRepo" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="UploadFile" />
+      <option name="MAIN_CLASS_NAME" value="CreateRepo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -358,13 +419,7 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="ownsvnpan" />
       <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -372,6 +427,23 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -466,20 +538,33 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="CFConfiguration" factoryName="Remote">
+      <option name="PORT" value="80" />
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <option name="USERNAME" value="" />
+        <option name="PASSWORD" value="" />
+        <data />
+      </server-settings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.SVNutil" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Commit" />
-      <item index="2" class="java.lang.String" itemvalue="Application.History" />
-      <item index="3" class="java.lang.String" itemvalue="Application.DisplayFile" />
-      <item index="4" class="java.lang.String" itemvalue="Application.UploadFile" />
+      <item index="0" class="java.lang.String" itemvalue="Application.IndexManager" />
+      <item index="1" class="java.lang.String" itemvalue="Application.IniParser" />
+      <item index="2" class="java.lang.String" itemvalue="Application.NewParser" />
+      <item index="3" class="java.lang.String" itemvalue="Application.PasswdParser" />
+      <item index="4" class="java.lang.String" itemvalue="Application.CreateRepo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.UploadFile" />
-        <item index="1" class="java.lang.String" itemvalue="Application.DisplayFile" />
-        <item index="2" class="java.lang.String" itemvalue="Application.History" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Commit" />
-        <item index="4" class="java.lang.String" itemvalue="Application.SVNutil" />
+        <item index="0" class="java.lang.String" itemvalue="Application.CreateRepo" />
+        <item index="1" class="java.lang.String" itemvalue="Application.PasswdParser" />
+        <item index="2" class="java.lang.String" itemvalue="Application.NewParser" />
+        <item index="3" class="java.lang.String" itemvalue="Application.IniParser" />
+        <item index="4" class="java.lang.String" itemvalue="Application.IndexManager" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -488,6 +573,25 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="false">C:\Users\user\AppData\Roaming\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="76df1ca1-fe4e-4fc5-9b98-b31f0af1ea6f" name="Default" comment="" />
@@ -507,19 +611,19 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39966273" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.6892139" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22120658" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28330523" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2128788" sideWeight="0.3344538" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7386172" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8189394" sideWeight="0.7133221" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2866779" sideWeight="0.9933775" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38560605" sideWeight="0.5851602" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4148398" sideWeight="0.9933775" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22857143" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -589,113 +693,96 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="9" selection-start="1379" selection-end="1379" vertical-scroll-proportion="-0.6785714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="72" selection-start="854" selection-end="854" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/testuse/test1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/mmGrid-master/examples/api.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="321" column="24" selection-start="11268" selection-end="11268" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/mmGrid-master/src/mmGrid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1336" column="59" selection-start="48532" selection-end="48532" vertical-scroll-proportion="0.0" />
+        <state line="43" column="9" selection-start="1379" selection-end="1379" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/mmGrid-master/examples/examples1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="55" selection-start="13247" selection-end="13247" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="136" column="55" selection-start="13247" selection-end="13247" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SVNlist.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_80/src.zip!/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="29" selection-start="290" selection-end="290" vertical-scroll-proportion="0.03777336">
-          <folding />
-        </state>
+        <state line="148" column="13" selection-start="6572" selection-end="6572" vertical-scroll-proportion="4.9546485" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/C语言实现读取配置文件.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
+        <state line="103" column="12" selection-start="2387" selection-end="2387" vertical-scroll-proportion="4.0350513" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/svnrep.jsp">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_80/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="24" selection-start="2720" selection-end="2720" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2062" column="22" selection-start="81353" selection-end="81360" vertical-scroll-proportion="1.1938144" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/svnkit-1.8.9.jar!/org/tmatesoft/svn/core/io/SVNRepository.class">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_80/src.zip!/java/util/regex/Matcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="298" column="0" selection-start="22377" selection-end="22377" vertical-scroll-proportion="16.742857" />
+        <state line="373" column="0" selection-start="12473" selection-end="12473" vertical-scroll-proportion="0.33150685" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SVNutil.java">
+    <entry file="file://$PROJECT_DIR$/src/NewWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="23" selection-start="4381" selection-end="4381" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="24" selection-start="304" selection-end="304" vertical-scroll-proportion="0.06713781" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DisplayFile.java">
+    <entry file="file://$PROJECT_DIR$/src/GroupValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="80" selection-start="5520" selection-end="5520" vertical-scroll-proportion="5.7079644">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/History.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="0" selection-start="6586" selection-end="6586" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/svnkit-1.8.9.jar!/org/tmatesoft/svn/core/internal/io/dav/DAVCommitEditor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="4684" selection-end="4684" vertical-scroll-proportion="0.71009773">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UploadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="77" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+        <state line="16" column="57" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AddTopDir.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.6641414">
+        <state line="51" column="13" selection-start="1346" selection-end="1346" vertical-scroll-proportion="1.0650995" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IniParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="17" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IndexManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="194" column="24" selection-start="6492" selection-end="6734" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UploadFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="181" column="64" selection-start="6370" selection-end="6370" vertical-scroll-proportion="5.531646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswdParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="21" selection-start="2192" selection-end="2192" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AuthzParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="58" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="9" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CreateRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="75" selection-start="305" selection-end="305" vertical-scroll-proportion="-0.5302013">
           <folding />
         </state>
       </provider>
@@ -778,7 +865,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>json-lib-2.4-jdk15</last-edited>
+          <last-edited>lucene</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

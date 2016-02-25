@@ -5,6 +5,8 @@ import java.util.*;
 import java.util.Map.Entry;
 
 /**
+ * 本文件用户解析各个svn版本库下的svn.authz文件
+ * 尚未完成(2月18日)
  * Created with IntelliJ IDEA.
  * User: user
  * Date: 16-2-16
@@ -13,13 +15,13 @@ import java.util.Map.Entry;
  * 正则表达式:http://blog.csdn.net/kdnuggets/article/details/2526588
  *操作ini文件:http://blog.csdn.net/Mr__fang/article/details/42030071
  */
-public class NewParser {
+public class AuthzParser {
     protected Map<String, Map<String,String>> sections = new LinkedHashMap<String, Map<String, String>>();
     private transient String currentSection;
     private transient Map<String,String> current;
     private String[] notes = new String[] {";", "#", "//"};
 
-    public NewParser(String filename) throws Exception {
+    public AuthzParser(String filename) throws Exception {
         BufferedReader reader = null;
         try {
             File file = new File(filename);
@@ -33,6 +35,13 @@ public class NewParser {
                 reader.close();
             }
         }
+    }
+
+    public boolean isAuthzFile(String fileName) {
+        if (fileName.lastIndexOf(".passwd") >0) {
+            return true;
+        }
+        return false;
     }
 
     protected void reader(BufferedReader reader) throws IOException {
@@ -97,7 +106,7 @@ public class NewParser {
 
    public static void main(String[] args) {
        try {
-           NewParser p = new NewParser("C:\\test\\svn.authz");
+           AuthzParser p = new AuthzParser("C:\\test\\svn.authz");
            String val = p.getValue("groups", "RW__test");
            Set<String> keys = p.sectionKeys();
            for(String k : keys){
